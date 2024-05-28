@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redtore | Ecommerce Webite Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+<body>
+    <div class="header">
+    <div class="container">
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://rsanimesh.github.io/images/logo.png" width="125px">
+        </div>
+        <nav>
+            <ul id="MenuItems">
+                <li><a href="clone.2.html">Home</a></li>
+                <li><a href="details.html">Product</a></li>
+                <li><a href="card.html">About</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="account.html">Account</a></li>
+            </ul>
+        </nav>
+        <img src="https://cdn.icon-icons.com/icons2/2582/PNG/512/shopping_bag_icon_153998.png" width="30px" height="30px">
+        <img src="https://cdn.iconscout.com/icon/free/png-256/free-hamburger-menu-462145.png?f=webp" class="menu-icon" onclick="menutoggle()">
+    </div>
+    </div>
+    <!----------------------account page-------------------------->
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="https://rsanimesh.github.io/images/image1.png">
+                </div>
+
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="Indicator">
+                        </div>
+
+                        <form id="LoginForm">
+                            <input type="text" placeholder="username">
+                            <input type="password" placeholder="password">
+                            <input type="submit" class="btn">Login</button>
+                            <a href="">Forget password</a>
+                        </form>
+
+                        <form id="RegForm">
+                            <input type="text" placeholder="username">
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="password">
+                            <input type="submit" class="btn">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!---------------footer-------------------------->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download Our App</h3>
+                        <p>Download App for Android and ios mobile phone.</p>
+                    </div>
+                    <div class="footer-col-2">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-6UnfVgGWhapj_ots_xTdqk9nY9eVoxm1lZKIB1M-&s">
+                        <p>Our Purpose Is To Sustainably Makes the pleasure and 
+                        Benefits of sports Accessible to the Many.</p>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>Useful link</h3>
+                        <ul>
+                            <li>Coupons</li>
+                            <li>Blog post</li>
+                            <li>Return poli</li>
+                            <li>Join Affiliate</li>                         
+                        </ul>
+                    </div>
+                    <div class="footer-col-4">
+                        <h3>Follow us</h3>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                            <li>Instagram</li>
+                            <li>Youtube</li>                         
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+  <!----------js for toogle menu----------->
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if (MenuItems.style.maxHeight == "0px")
+            {
+                MenuItems.style.maxHeight = "200px";
+            }
+            else
+            {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+<!-------------js for toogle menu------------------>
+        <script>
+
+            var LoginForm = document.getElementById("LoginForm");
+            var RegForm = document.getElementById("RegForm");
+            var Indicator = document.getElementById("Indicator");
+
+            function register(){
+                  
+                RegForm.style.transform = "translateX(0px)";
+                LoginForm.style.transform = "translateX(0px)";
+                Indicator.style.transform = "translateX(100px)";
+
+            }
+            function login(){
+                  
+                  RegForm.style.transform = "translateX(300px)";
+                  LoginForm.style.transform = "translateX(300px)";
+                  Indicator.style.transform = "translateX(0px)";
+  
+              }
+       </script>
+</body>
+</html>
